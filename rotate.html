@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--
+    这里通过get形式的type字段判断不同的明细(乐豆明细，游戏币明细，对战记录);
+-->
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <!--移动端需要的meta-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!--关键词和描述-->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <!--css-->
+    <link rel="stylesheet" href="rotate.css" />
+    <link rel="icon" href="" />
+    <!--js-->
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="rem.js"></script>
+    <!--页面抽奖流程相关js-->
+    <script type="text/javascript" src="rotate.js"></script>
+    <!--传统的流式布局-->
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .jpBox{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            font-size: 0.375rem;
+            color: #333333;
+            white-space: nowrap;
+        }
+        .title{
+            text-align: center;font-size: 16px;margin-top: 100px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body style="max-width: 640px;display: block;margin: auto">
+<!--正常流程-->
+<div class="title">正常的翻牌流程</div>
+    <div id="allParent" class="Y-content" >
+        <div class="item i1">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        游戏币100
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i2">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        公仔一个
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i3">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        画笔一个
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i4">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        哎呦~~
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i5">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        再抽一次
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i6">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        金豆100
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i7">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        相片一张
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="item i8">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        金豆20
+                    </div>
+                </div>
+                <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+            </div>
+        </div>
+        <div class="selectBox" id="">
+            <div class="parent">
+                <div class="face">
+                    <div class="jpBox">
+                        点我抽奖
+                    </div>
+                </div>
+                <div class="back"></div>
+            </div>
+        </div>
+    </div>
+<!--一来就将牌设置为反面状态-->
+<div class="title">一来就将牌设置为反面状态</div>
+<div id="allParent2" class="Y-content" >
+    <div class="item i1">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    游戏币100
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i2">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    公仔一个
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i3">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    画笔一个
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i4">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    哎呦~~
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i5">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    再抽一次
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i6">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    金豆100
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i7">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    相片一张
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i8">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    金豆20
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="selectBox" id="">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    点我抽奖
+                </div>
+            </div>
+            <div class="back"></div>
+        </div>
+    </div>
+</div>
+<!--设置不能点击的翻牌-->
+<div class="title">设置不能点击的翻牌</div>
+<div id="allParent3" class="Y-content">
+    <div class="item i1">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    游戏币100
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i2">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    公仔一个
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i3">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    画笔一个
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i4">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    哎呦~~
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i5">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    再抽一次
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i6">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    金豆100
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i7">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    相片一张
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i8">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    金豆20
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="selectBox" id="">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    点我抽奖
+                </div>
+            </div>
+            <div class="back"></div>
+        </div>
+    </div>
+</div>
+<!--当翻牌到了最大数量就显示所有奖品-->
+<div class="title">当翻牌到了最大数量就显示所有奖品</div>
+<div id="allParent4" class="Y-content" >
+    <div class="item i1">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    游戏币100
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i2">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    公仔一个
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i3">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    画笔一个
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i4">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    哎呦~~
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i5">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    再抽一次
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i6">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    金豆100
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i7">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    相片一张
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="item i8">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    金豆20
+                </div>
+            </div>
+            <div class="back"><img src="a1.png" style="width: 100%;height: 100%"></div>
+        </div>
+    </div>
+    <div class="selectBox" id="">
+        <div class="parent">
+            <div class="face">
+                <div class="jpBox">
+                    点我抽奖
+                </div>
+            </div>
+            <div class="back"></div>
+        </div>
+    </div>
+</div>
+    <!--提示框-->
+    <div id="tooltip" style="display:none;position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);font-size: 18px;background-color: rgba(0,0,0,0.5);color: white;padding: 5px 10px;z-index: 1000;white-space: nowrap"></div>
+<script type="text/javascript">
+    //提示框
+    function showTool(str){
+        var ele =  document.getElementById("tooltip");
+        ele.innerHTML = str;
+        ele.style.display="";
+        setTimeout(hideTool,1000);
+    }
+    function hideTool(str){
+        var ele =  document.getElementById("tooltip");
+        ele.innerHTML = str;
+        ele.style.display="none";
+    }
+
+    window.onload = function(){
+      var obj =   $("#allParent").rotateEx({
+            maxNumCall:function(){
+                showTool("翻到了最大的数量啦");
+            },
+            clickAmtStart:function(o1,o2,o3){
+                showTool("恭喜抽中"+o3.innerText);
+            },
+            clickAmtEnd:function(o1,o2){
+                //o2显示所有奖品
+                o2.allFace();
+            },
+            changeAmtCall:function(o1,o2){
+                //随机修改奖品的位置
+                obj.reset();
+            }
+        });
+        //一来就播放动画且设置能翻牌的数量
+        var obj2 =   $("#allParent2").rotateEx({
+            maxNum:5,
+            maxNumCall:function(){
+                showTool("翻到了最大的数量啦");
+            },
+            clickAmtStart:function(o1,o2,o3){
+                showTool("恭喜抽中"+o3.innerText);
+            },
+            changeAmtCall:function(o1,o2){
+                //随机修改奖品的位置
+                obj2.reset();
+            }
+        });
+        obj2.rotate.allBack();
+        //一来就播放动画且设置能翻牌的数量且设置不能反派的元素
+        var obj3 =   $("#allParent3").rotateEx({
+            maxNum:2,
+            noFaceEle:[3,5],
+            maxNumCall:function(){
+                showTool("翻到了最大的数量啦");
+            },
+            clickAmtStart:function(o1,o2,o3){
+                showTool("恭喜抽中"+o3.innerText);
+            },
+            changeAmtCall:function(o1,o2){
+                //随机修改奖品的位置
+                obj3.reset();
+            }
+        });
+        obj3.rotate.allBack();
+        window.test = obj3
+        var obj4 =   $("#allParent4").rotateEx({
+            maxNum:2,
+            noFaceEle:[3,5],
+            maxNumCall:function(){
+                showTool("翻到了最大的数量啦");
+            },
+            clickAmtStart:function(o1,o2,o3){
+                showTool("恭喜抽中"+o3.innerText);
+            },
+            clickAmtEnd:function(o1,o2,ele,allO){
+                if(allO.option.maxNum == o2.getZNum()){
+                    o2.allFace();
+                }
+            },
+            changeAmtCall:function(o1,o2){
+                //随机修改奖品的位置
+                obj4.reset();
+            }
+        });
+        obj4.rotate.allBack();
+    }
+</script>
+</body>
+</html>
